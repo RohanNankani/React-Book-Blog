@@ -3,15 +3,24 @@
     {
       "title": "A Series of Unfortunate Events",
       "author": "Lemony Snicket",
-      "rating": "3.3",
+      "rating": 5,
       "summary": "It's about orphans who face difficulties.",
       "review": [
-        "This is a great book.",
-        "sdasd",
-        "sadas"
+        "This is a great book."
       ],
-      "totalNumReviews": 3,
+      "totalNumReviews": 1,
       "id": 1
+    },
+    {
+      "title": "IT",
+      "author": "Stephen King",
+      "rating": "4",
+      "summary": "About a clown.",
+      "review": [
+        "It was decent."
+      ],
+      "totalNumReviews": 1,
+      "id": 2
     }
   ]
 }

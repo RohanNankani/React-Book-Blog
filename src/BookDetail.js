@@ -13,14 +13,14 @@ const BookDetails = () => {
     const {data: book, error, isPending} = useFetch(`http://localhost:8000/books/` + id)
     const history = useHistory();
 
-    // const handleClick = () => {
-    //     fetch(`http://localhost:8000/books/` + book.id, {
-    //         method: 'DELETE'
-    //     }).then(() => {
-    //         setPending(false);
-    //         history.push('/');
-    //     })
-    // }
+    const handleClick = () => {
+        fetch(`http://localhost:8000/books/` + book.id, {
+            method: 'DELETE'
+        }).then(() => {
+            setPending(false);
+            history.push('/');
+        })
+    }
 
     const submitReview = (e) => {
         e.preventDefault();
@@ -71,7 +71,8 @@ const BookDetails = () => {
                 <div>{book.summary}</div>
                 <div><b>Reviews: </b></div>
                 <div>{book.review.map(review => <div><ul>{review}</ul></div>)}</div>
-                <button onClick={addReview}>Add Review</button>
+                <div><button onClick={addReview}>Add Review</button></div>
+                <div><button onClick={handleClick}>Delete</button></div>
                 {additionalReview && (
                 <div>
                     <form onSubmit={addReview}>
