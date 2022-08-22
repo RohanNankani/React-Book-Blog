@@ -1,0 +1,15 @@
+{
+  "books": [
+    {
+      "title": "A Series of Unfortunate Events",
+      "author": "Lemony Snicket",
+      "rating": 5,
+      "summary": "It's about orphans who face difficulties.",
+      "review": [
+        "This is a great book."
+      ],
+      "totalNumReviews": 1,
+      "id": 1
+    }
+  ]
+}
