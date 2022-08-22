@@ -3,12 +3,14 @@
     {
       "title": "A Series of Unfortunate Events",
       "author": "Lemony Snicket",
-      "rating": 5,
+      "rating": "3.3",
       "summary": "It's about orphans who face difficulties.",
       "review": [
-        "This is a great book."
+        "This is a great book.",
+        "sdasd",
+        "sadas"
       ],
-      "totalNumReviews": 1,
+      "totalNumReviews": 3,
       "id": 1
     }
   ]

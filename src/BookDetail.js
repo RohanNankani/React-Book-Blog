@@ -29,7 +29,7 @@ const BookDetails = () => {
         const totalNumReviews = book.totalNumReviews + 1
 
         const a = parseFloat(newRating)
-        const b = parseFloat(book.rating)
+        const b = parseFloat(book.rating) * book.totalNumReviews // prevTotal
         const c = totalNumReviews
 
         const averageRating = ((a + b) / (c)).toFixed(1);
