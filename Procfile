@@ -1,0 +1,1 @@
+web: npx json-server --watch data/db.json  --host '0.0.0.0' --port $PORT
