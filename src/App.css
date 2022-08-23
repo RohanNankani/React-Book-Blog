@@ -5,6 +5,7 @@
   margin: 0;
   font-family: "Playfair Display";
   color: #333;
+  align-items: center;
 }
 .navbar {
   padding: 20px;
