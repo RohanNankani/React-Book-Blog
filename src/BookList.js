@@ -10,8 +10,8 @@ const BookList = ({ books, title}) => {
                 <div className='book-preview'key={book.id}>
                     <Link to={`/book-detail/${book.id}`}>
                         <h2>{ book.title }</h2>
-                        <p>Author: { book.author }</p>
-                        <p>Rated: 
+                        <p><b>Author:</b> { book.author }</p>
+                        <p><b>Rated:</b> 
                             <Rating
                                 name="simple-controlled"
                                 value={book.rating}

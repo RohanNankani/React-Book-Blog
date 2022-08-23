@@ -67,7 +67,7 @@ const BookDetails = () => {
             {isPending && <div>Loading...</div>}
             {error && <div>{error}</div>}
             {book && (
-            <article>
+            <article className='text'>
                 <h2>{book.title}</h2>
                 <p>{book.author}</p>
                 <Rating
@@ -82,33 +82,40 @@ const BookDetails = () => {
                 <div><b>Reviews: </b></div>
                 <div>{book.review.map((review, idx) => <div><ul>{review + "\t\t\t - by: " + book.contributor[idx]}</ul></div>)}</div>
                 <div><button onClick={addReview}>Add Review</button></div>
-                <div><button onClick={handleClick}>Delete</button></div>
+                <div><button onClick={handleClick }>Delete</button></div>
                 {additionalReview && (
                 <div>
                     <form onSubmit={addReview}>
-                        <select
-                        value={newRating}
-                        onChange={(e) => setNewRating(e.target.value)}
-                        >
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        </select>
-                        <label>Review:</label>
-                        <textarea
-                            required
-                            value = {newReview}
-                            onChange={(e) => setNewReview(e.target.value)}
-                        ></textarea>
-                        <label>Your Name:</label> 
-                        <input
-                            type="text"
-                            required
-                            value={newContributor}
-                            onChange={(e) => setNewContributor(e.target.value)}
-                        />
+                        <div>
+                            <label>Rating: </label>
+                            <select
+                            value={newRating}
+                            onChange={(e) => setNewRating(e.target.value)}
+                            >
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Review: </label>
+                            <textarea
+                                required
+                                value = {newReview}
+                                onChange={(e) => setNewReview(e.target.value)}
+                            ></textarea>
+                        </div>
+                        <div>
+                            <label>Your Name: </label> 
+                            <input
+                                type="text"
+                                required
+                                value={newContributor}
+                                onChange={(e) => setNewContributor(e.target.value)}
+                            />
+                        </div>
                     </form>
                     <div><button onClick={submitReview}>Submit Review</button></div>
                     {Pending && <button disabled>Adding Review...</button>}

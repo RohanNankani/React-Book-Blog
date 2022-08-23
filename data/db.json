@@ -7,17 +7,28 @@
       "summary": "It's about orphans who face difficulties.",
       "review": [
         "This is a great book.",
-        "Decent book",
-        "Excellent book",
-        "Eggcelent!"
+        "Great book"
       ],
-      "totalNumReviews": 4,
+      "totalNumReviews": 2,
       "contributor": [
         "Tom",
-        "Edward",
-        "Edmond"
+        "Bob"
       ],
       "id": 1
+    },
+    {
+      "contributor": [
+        "Chris"
+      ],
+      "title": "IT",
+      "author": "Stephen King",
+      "rating": "4",
+      "summary": "Its about a clown.",
+      "review": [
+        "Its pretty decent."
+      ],
+      "totalNumReviews": 1,
+      "id": 2
     }
   ]
 }

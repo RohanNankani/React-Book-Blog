@@ -3,7 +3,7 @@
 /* base styles */
 * {
   margin: 0;
-  font-family: "Quicksand";
+  font-family: "Playfair Display";
   color: #333;
 }
 .navbar {
@@ -15,7 +15,7 @@
   border-bottom: 1px solid #f2f2f2;
 }
 .navbar h1 {
-  color: #f1356d;
+  color: #2385d5;
 }
 .navbar .links {
   margin-left: auto;
@@ -26,7 +26,7 @@
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: #2385d5;
 }
 .content {
   max-width: 600px;
@@ -36,12 +36,12 @@
 
 /* book previews / list */
 .book-preview {
-  padding: 10px 16px;
-  margin: 20px 0;
+  padding: 20px;
+  margin: 20px;
   border-bottom: 1px solid #fafafa;
 }
 .book-preview:hover {
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
 }
 .book-preview h2 {
   font-size: 20px;
@@ -52,28 +52,42 @@
   text-decoration: none;
 }
 
+/*The heading for the BookList.js file ("All Books" on home page)*/
+.book-list {
+  padding: 20px;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+
 /* book details page */
+
+.text {
+  padding: 20px;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
 .book-details h2 {
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 10px;
 }
+
 .book-details div {
   margin: 20px 0;
 }
 .book-details button {
-  background: #f1356d;
+  background: #2385d5;
   color: #fff;
   border: 0;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
 }
-
-.book-details rating-stars {
-  color:  rgb(245, 250, 0);
-}
-
 
 /* create new book form */
 .create {
@@ -86,8 +100,10 @@
   display: block;
 }
 .create h2 {
+  margin-top: 20px;
+  text-align: left;
   font-size: 20px;
-  color: #f1356d;
+  color: #333;
   margin-bottom: 30px;
 }
 .create input, .create textarea, .create select {
@@ -99,11 +115,10 @@
   display: block;
 }
 .create button {
-  background: #f1356d;
+  background: #2385d5;
   color: #fff;
   border: 0;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
 }
-
