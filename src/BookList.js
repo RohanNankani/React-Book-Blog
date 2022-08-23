@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { Rating } from '@mui/material';
+import StarIcon from '@mui/icons-material/Star';
 
 const BookList = ({ books, title}) => {
     return (
@@ -9,7 +11,15 @@ const BookList = ({ books, title}) => {
                     <Link to={`/book-detail/${book.id}`}>
                         <h2>{ book.title }</h2>
                         <p>Author: { book.author }</p>
-                        <p>Rated: { book.rating }</p>
+                        <p>Rated: 
+                            <Rating
+                                name="simple-controlled"
+                                value={book.rating}
+                                precision={0.1}
+                                icon={<StarIcon style={{fill: "orange"}}/>}
+                                readOnly
+                            />
+                        </p>
                     </Link>
                 </div>
             ))}

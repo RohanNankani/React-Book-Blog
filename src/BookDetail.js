@@ -1,6 +1,8 @@
 import {useHistory, useParams} from 'react-router-dom';
 import { useState } from "react";
 import useFetch from './useFetch';
+import { Rating } from '@mui/material';
+import StarIcon from '@mui/icons-material/Star';
 
 const BookDetails = () => {
     const [newRating, setNewRating] = useState(1);
@@ -68,7 +70,13 @@ const BookDetails = () => {
             <article>
                 <h2>{book.title}</h2>
                 <p>{book.author}</p>
-                <p>{book.rating}</p>
+                <Rating
+                name="simple-controlled"
+                value={book.rating}
+                precision={0.1}
+                icon={<StarIcon style={{fill: "orange"}}/>}
+                readOnly
+                />
                 <div><b>Summary:</b></div>
                 <div>{book.summary}</div>
                 <div><b>Reviews: </b></div>

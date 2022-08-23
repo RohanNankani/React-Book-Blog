@@ -1,17 +1,22 @@
 {
   "books": [
     {
-      "contributor": [
-        "Rohan"
-      ],
       "title": "A Series of Unfortunate Events",
       "author": "Lemony Snicket",
-      "rating": 5,
+      "rating": "4.5",
       "summary": "It's about orphans who face difficulties.",
       "review": [
-        "This is a great book."
+        "This is a great book.",
+        "Decent book",
+        "Excellent book",
+        "Eggcelent!"
       ],
-      "totalNumReviews": 1,
+      "totalNumReviews": 4,
+      "contributor": [
+        "Tom",
+        "Edward",
+        "Edmond"
+      ],
       "id": 1
     }
   ]
