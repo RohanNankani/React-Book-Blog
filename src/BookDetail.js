@@ -3,6 +3,7 @@ import { useState } from "react";
 import useFetch from './useFetch';
 import { Rating } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
+import backend_url from "./constants";
 
 const BookDetails = () => {
     const [newRating, setNewRating] = useState(1);
@@ -13,11 +14,11 @@ const BookDetails = () => {
 
 
     const {id} = useParams();
-    const {data: book, error, isPending} = useFetch(`http://localhost:8000/books/` + id)
+    const {data: book, error, isPending} = useFetch(`${backend_url}/books/`+ id)
     const history = useHistory();
 
     const handleClick = () => {
-        fetch(`http://localhost:8000/books/` + book.id, {
+        fetch(`${backend_url}/books/` + book.id, {
             method: 'DELETE'
         }).then(() => {
             setPending(false);
@@ -47,7 +48,7 @@ const BookDetails = () => {
 
         setPending(true);
 
-        fetch(`http://localhost:8000/books/` + book.id, {
+        fetch(`${backend_url}/books/` + book.id, {
             method: 'PUT',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(book2)

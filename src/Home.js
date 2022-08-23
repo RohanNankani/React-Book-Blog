@@ -1,8 +1,9 @@
 import BookList from './BookList';
 import useFetch from './useFetch';
+import backend_url from './constants';
 
 const Home = () => {
-    const{data: books, isPending, error} = useFetch(`http://localhost:8000/books`);
+    const{data: books, isPending, error} = useFetch(`${backend_url}/books`);
 
     return (  
         <div className="home">

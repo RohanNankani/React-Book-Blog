@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import backend_url from "./constants";
 
 const AddReview = () => {
     const[title, setTitle] = useState('');
@@ -18,7 +19,7 @@ const AddReview = () => {
 
         setIsPending(true);
 
-        fetch(`http://localhost:8000/books`, {
+        fetch(`${backend_url}/books`, {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(book)
