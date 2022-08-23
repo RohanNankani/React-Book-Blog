@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 const AddReview = () => {
     const[title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
+    const [contributor, setContributor] = useState('');
     const [rating, setRating] = useState('');
     const[summary, setSummary] = useState('');
     const[review, setReview] = useState('');
@@ -13,7 +14,7 @@ const AddReview = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const totalNumReviews = 1
-        const book = {title, author, rating, summary, review:[review], totalNumReviews};
+        const book = {contributor:[contributor], title, author, rating, summary, review:[review], totalNumReviews};
 
         setIsPending(true);
 
@@ -69,6 +70,13 @@ const AddReview = () => {
                     value = {review}
                     onChange={(e) => setReview(e.target.value)}
                 ></textarea>
+                <label>Your Name:</label> 
+                <input
+                    type="text"
+                    required
+                    value={contributor}
+                    onChange={(e) => setContributor(e.target.value)}
+                />
                 {!isPending && <button>Add Blog</button>}
                 {isPending && <button disabled>Adding Blog...</button>}
             </form>

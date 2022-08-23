@@ -5,6 +5,7 @@ import useFetch from './useFetch';
 const BookDetails = () => {
     const [newRating, setNewRating] = useState(1);
     const[newReview, setNewReview] = useState('');
+    const[newContributor, setNewContributor] = useState('');
     const[Pending, setPending] = useState('');
     const[additionalReview, setAdditionalReview] = useState(false);
 
@@ -36,10 +37,11 @@ const BookDetails = () => {
 
         // compute new review
         book.review.push(newReview)
+        book.contributor.push(newContributor)
 
 
         // const book = {title, author, averageRating, summary, updatedReview};
-        const book2 = {title: book.title, author: book.author, rating: averageRating, summary: book.summary, review: book.review, totalNumReviews};
+        const book2 = {title: book.title, author: book.author, rating: averageRating, summary: book.summary, review: book.review, totalNumReviews, contributor: book.contributor};
 
         setPending(true);
 
@@ -55,7 +57,7 @@ const BookDetails = () => {
     }
 
     const addReview = () => {
-        setAdditionalReview(true)
+        setAdditionalReview(!additionalReview)
     }
 
     return ( 
@@ -70,7 +72,7 @@ const BookDetails = () => {
                 <div><b>Summary:</b></div>
                 <div>{book.summary}</div>
                 <div><b>Reviews: </b></div>
-                <div>{book.review.map(review => <div><ul>{review}</ul></div>)}</div>
+                <div>{book.review.map((review, idx) => <div><ul>{review + "\t\t\t - by: " + book.contributor[idx]}</ul></div>)}</div>
                 <div><button onClick={addReview}>Add Review</button></div>
                 <div><button onClick={handleClick}>Delete</button></div>
                 {additionalReview && (
@@ -92,6 +94,13 @@ const BookDetails = () => {
                             value = {newReview}
                             onChange={(e) => setNewReview(e.target.value)}
                         ></textarea>
+                        <label>Your Name:</label> 
+                        <input
+                            type="text"
+                            required
+                            value={newContributor}
+                            onChange={(e) => setNewContributor(e.target.value)}
+                        />
                     </form>
                     <div><button onClick={submitReview}>Submit Review</button></div>
                     {Pending && <button disabled>Adding Review...</button>}

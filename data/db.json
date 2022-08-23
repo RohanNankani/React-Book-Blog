@@ -1,6 +1,9 @@
 {
   "books": [
     {
+      "contributor": [
+        "Rohan"
+      ],
       "title": "A Series of Unfortunate Events",
       "author": "Lemony Snicket",
       "rating": 5,
@@ -10,17 +13,6 @@
       ],
       "totalNumReviews": 1,
       "id": 1
-    },
-    {
-      "title": "IT",
-      "author": "Stephen King",
-      "rating": "4",
-      "summary": "About a clown.",
-      "review": [
-        "It was decent."
-      ],
-      "totalNumReviews": 1,
-      "id": 2
     }
   ]
 }
